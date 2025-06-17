@@ -1,0 +1,117 @@
+.footer {
+    background: #616060;
+    color: white;
+    padding: 60px 0 20px;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-column h3 {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 20px;
+    border-bottom: 2px solid #9ccddb;
+    padding-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #e0e3e6;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: white;
+}
+
+.logo-text {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.footer-info{
+
+    display: flex;
+    justify-content:  space-between;
+    gap:30px;
+    text-align: left;
+
+}
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+
+.contact-info p {
+    color: #e0e3e6;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.social-icons{
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:45px;
+    width: 24px;
+    height: 24px;
+    color: white;
+
+}
+
+.social-icons a:hover {
+    background: #555657;
+    color: #072d4a;
+}
+
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.3);
+    color: #e0e3e6;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 1px solid rgba(156, 205, 219, 0.2);
+}
+.footer-left {
+    margin-top: 20px;
+    margin-left: 1200px;
+    color: #ede6e6;
+}
+
+.footer-right a {
+
+    color: #e0e3e6;
+    background: #313132;
+    border-radius: 50%;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.footer-right a i {
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer-right a:hover {
+    background: #444;
+}

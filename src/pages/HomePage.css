@@ -1,0 +1,11 @@
+.home-page {
+    min-height: 100vh;
+}
+
+.home-page section {
+    margin-bottom: 0;
+}
+
+.home-page section:last-child {
+    margin-bottom: 0;
+}
