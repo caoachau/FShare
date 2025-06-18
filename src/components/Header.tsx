@@ -52,7 +52,7 @@ const Header: React.FC = () => {
                         </button>
                         <Link to="/" className="logo">
                             <i className="fas fa-book-open"></i>
-                            <h1>DevShare</h1>
+                            <h1>FShare</h1>
                         </Link>
                     </div>
 

@@ -149,7 +149,12 @@
     object-fit: cover;
     border: 2px solid #cbd5e1;
 }
-
+.author-avatar {
+    width: 100%;
+  
+    object-fit: cover;
+   margin-left: 60px;
+}
 .author-details h3 {
     font-size: 1.1rem;
     margin-bottom: 4px;

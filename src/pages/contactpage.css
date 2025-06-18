@@ -1,5 +1,30 @@
-/* Contact Page Specific Styles */
+.static-page {
+    padding: 40px 20px;
+    background-color: #f4f6f9;
+}
 
+.static-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Contact Section */
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -7,7 +32,7 @@
     margin-bottom: 40px;
 }
 
-.contact-info1{
+.contact-info1 {
     background-color: #f8f9fa;
     padding: 30px;
     border-radius: 8px;
@@ -61,58 +86,7 @@
     font-size: 0.9rem;
 }
 
-.social-links {
-    margin-top: 40px;
-}
-
-.social-links h3 {
-    font-size: 1.3rem;
-    color: #2c3e50;
-    margin-bottom: 15px;
-}
-
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    color: white;
-    font-size: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.social-icon:hover {
-    transform: translateY(-3px);
-}
-
-.social-icon.facebook {
-    background-color: #3b5998;
-}
-
-.social-icon.twitter {
-    background-color: #1da1f2;
-}
-
-.social-icon.linkedin {
-    background-color: #0077b5;
-}
-
-.social-icon.youtube {
-    background-color: #ff0000;
-}
-
-.social-icon.github {
-    background-color: #333;
-}
-
-/* Contact Form */
+/* Form Section */
 .contact-form-section {
     background-color: white;
     padding: 30px;
@@ -160,9 +134,22 @@
     min-height: 150px;
 }
 
-.contact-form .submit-btn {
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.submit-btn {
     width: 100%;
-    padding: 15px;
     font-size: 1.1rem;
     font-weight: 600;
 }
@@ -201,7 +188,7 @@
         grid-template-columns: 1fr;
     }
 
-    .contact-info {
+    .contact-info1 {
         order: 2;
     }
 
@@ -242,14 +229,4 @@
         margin-right: 0;
         margin-bottom: 15px;
     }
-
-    .social-icons {
-        justify-content: center;
-    }
 }
-.contact-des{
-    font-size: 20px;
-    transform: translateY(-50px);
-    margin-left: 420px;
-}
-

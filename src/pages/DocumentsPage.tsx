@@ -124,6 +124,7 @@ const DocumentsPage: React.FC = () => {
 
                     </div>
                     <div className="dm-sx">
+                        
 
 
                     <div className="filter-group">
@@ -147,11 +148,6 @@ const DocumentsPage: React.FC = () => {
                             <option value="title">Theo tên A-Z</option>
                         </select>
                     </div>
-
-
-
-                    </div>
-                    <div className="search-section">
                         <form className="search-form" onSubmit={handleSearch}>
                             <div className="search-input-group">
                                 <input
@@ -165,6 +161,11 @@ const DocumentsPage: React.FC = () => {
                                 </button>
                             </div>
                         </form>
+
+
+                    </div>
+                    <div className="search-section">
+                        
                     </div>
 
                     {currentDocuments.length > 0 ? (
@@ -197,23 +198,28 @@ const DocumentsPage: React.FC = () => {
 
                                     <div className="card-footer">
                                         <div className="author-info">
-                                            <img src={doc.authorAvatar || "/placeholder.svg"} alt={doc.author} />
-                                            <div className="author-details">
-                                                <span className="author-name">{doc.author}</span>
-                                                <span className="publish-date">{new Date(doc.publishDate).toLocaleDateString("vi-VN")}</span>
-                                            </div>
+                                            {/* <div className="author-details">
+                                                
+                                                <span className="author-name">{doc.author}
+                                                    
+
+                                                    <span className="publish-date">{new Date(doc.publishDate).toLocaleDateString("vi-VN")}</span>
+                                                
+
+                                                </span>
+                                                
+                                            </div> */}
+                                                    <span className="author-info">
+                                                         <span className="author-name">{doc.author}</span>
+
+                                                        <img src={doc.authorAvatar || "/placeholder.svg"} alt={doc.author} />
+                                                        
+                                                    </span>
+                                                    
+                                                    
                                         </div>
 
-                                        <div className="document-stats">
-                                            <div className="stat-item">
-                                                <i className="fas fa-download"></i>
-                                                <span>{doc.downloads.toLocaleString()}</span>
-                                            </div>
-                                            <div className="stat-item">
-                                                <i className="fas fa-star"></i>
-                                                <span>{doc.rating}</span>
-                                            </div>
-                                        </div>
+                                     
                                     </div>
 
                                     <div className="card-overlay">

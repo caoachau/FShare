@@ -129,11 +129,15 @@ const DocumentDetailPage: React.FC = () => {
                         {/* Author Info */}
                         <div className="author-section">
                             <div className="author-info">
-                                <img src={document.authorAvatar || "/placeholder.svg"} alt={document.author} />
                                 <div className="author-details">
-                                    <h3>{document.author}</h3>
-                                    <p>Tác giả</p>
+                               
+                                    <p>Tác giả: {document.author}</p>
+                                    <p className="author-avatar">
+                                     <img src={document.authorAvatar || "/placeholder.svg"} alt={document.author} />
+                                    </p>
+                                    
                                     <div className="author-meta">
+                                        
                                         <span>Xuất bản: {new Date(document.publishDate).toLocaleDateString("vi-VN")}</span>
                                         <span>Cập nhật: {new Date(document.lastUpdated).toLocaleDateString("vi-VN")}</span>
                                     </div>

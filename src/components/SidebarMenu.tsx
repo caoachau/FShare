@@ -59,7 +59,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ isOpen, onClose }) => {
             ],
         },
         {
-            name: "Về DevShare",
+            name: "Về FShare",
             icon: "fas fa-info",
             submenu: [
                 { name: "Giới thiệu", icon: "fas fa-building", path: "/about" },
@@ -76,7 +76,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ isOpen, onClose }) => {
                 <div className="sidebar-header">
                     <Link to="/" className="logo" onClick={onClose}>
                         <i className="fas fa-book-open"></i>
-                        <h2>DevShare</h2>
+                        <h2>FShare</h2>
                     </Link>
                     <button className="close-btn" onClick={onClose}>
                         <i className="fas fa-times"></i>
@@ -129,7 +129,7 @@ const SidebarMenu: React.FC<SidebarMenuProps> = ({ isOpen, onClose }) => {
 
                 <div className="sidebar-footer">
                     <div className="footer-info">
-                        <p>© 2024 DevShare</p>
+                        <p>© 2024 FShare</p>
                         <p>Nền tảng chia sẻ tài liệu IT</p>
                     </div>
                 </div>

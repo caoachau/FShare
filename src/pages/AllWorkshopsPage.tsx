@@ -116,13 +116,8 @@ const AllWorkshopsPage: React.FC = () => {
         <div className="workshops-page">
             <div className="workshops-container">
                 <div className="page-header">
-                    <h1>Workshop & Sự kiện</h1>
-                    <p>Tham gia các workshop chất lượng cao để nâng cao kỹ năng lập trình của bạn</p>
-                </div>
-
-                <div className="workshops-filters">
-                    <div className="search-section">
-                        <form className="search-form" onSubmit={handleSearch}>
+                    <h1>Workshop & Sự kiện</h1><br />
+                    <form className="search-form" onSubmit={handleSearch}>
                             <input
                                 type="text"
                                 placeholder="Tìm kiếm workshop..."
@@ -133,6 +128,11 @@ const AllWorkshopsPage: React.FC = () => {
                                 <i className="fas fa-search"></i>
                             </button>
                         </form>
+                </div>
+
+                <div className="workshops-filters">
+                    <div className="search-section">
+                        
                     </div>
 
                     <div className="filter-controls">

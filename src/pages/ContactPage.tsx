@@ -1,7 +1,6 @@
 "use client"
 
-import type React from "react"
-import { useState } from "react"
+import React, { useState } from "react"
 import "./contactpage.css"
 
 const ContactPage: React.FC = () => {
@@ -15,7 +14,6 @@ const ContactPage: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
-        // Handle form submission
         alert("Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi trong vòng 24h.")
         setFormData({ name: "", email: "", subject: "", message: "", type: "general" })
     }
@@ -32,9 +30,8 @@ const ContactPage: React.FC = () => {
             <div className="static-container">
                 <div className="page-header">
                     <h1>Liên hệ hỗ trợ</h1>
-
+                   
                 </div>
-                <p className="contact-des">Chúng tôi luôn sẵn sàng hỗ trợ bạn</p>
 
                 <div className="contact-content">
                     <div className="contact-info1">
@@ -59,7 +56,7 @@ const ContactPage: React.FC = () => {
                                     <div className="method-info">
                                         <h4>Điện thoại</h4>
                                         <p>Hotline 1: 0123456789</p>
-                                        <p> Hotline 2: 0987654321</p>
+                                        <p>Hotline 2: 0987654321</p>
                                         <p>Thứ 2 - Thứ 6: 8:00 - 18:00</p>
                                     </div>
                                 </div>
@@ -86,15 +83,12 @@ const ContactPage: React.FC = () => {
                                     </div>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
 
                     <div className="contact-form-section">
                         <div className="content-section">
                             <h2>Gửi tin nhắn</h2>
-
                             <form className="contact-form" onSubmit={handleSubmit}>
                                 <div className="form-row">
                                     <div className="form-group">
@@ -159,8 +153,7 @@ const ContactPage: React.FC = () => {
                                 </div>
 
                                 <button type="submit" className="btn-primary submit-btn">
-                                    <i className="fas fa-paper-plane"></i>
-                                    Gửi tin nhắn
+                                    <i className="fas fa-paper-plane"></i> Gửi tin nhắn
                                 </button>
                             </form>
                         </div>
@@ -169,23 +162,19 @@ const ContactPage: React.FC = () => {
 
                 <div className="content-section">
                     <h2>Câu hỏi thường gặp</h2>
-
                     <div className="faq-list">
                         <div className="faq-item">
                             <h4>Làm thế nào để tải tài liệu?</h4>
                             <p>Bạn cần đăng nhập tài khoản, sau đó click vào nút "Tải xuống" trên trang chi tiết tài liệu.</p>
                         </div>
-
                         <div className="faq-item">
                             <h4>Tôi có thể upload tài liệu của mình không?</h4>
                             <p>Có, bạn có thể upload tài liệu thông qua trang "Upload" sau khi đăng nhập.</p>
                         </div>
-
                         <div className="faq-item">
                             <h4>Làm thế nào để đăng ký workshop?</h4>
                             <p>Truy cập trang Workshop, chọn workshop bạn quan tâm và click "Đăng ký ngay".</p>
                         </div>
-
                         <div className="faq-item">
                             <h4>Tôi quên mật khẩu, phải làm sao?</h4>
                             <p>Click vào "Quên mật khẩu" ở trang đăng nhập và làm theo hướng dẫn.</p>
