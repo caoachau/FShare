@@ -114,8 +114,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isSignUp: init
                 </button>
 
                 <div className="modal-header">
-                    <h2>{isSignUp ? "Đăng ký tài khoản" : "Đăng nhập"}</h2><br/>
-                    <p>{isSignUp ? "Tạo tài khoản mới để truy cập DevShare" : "Chào mừng bạn quay trở lại!"}</p>
+                <h2>{isSignUp ? "Đăng ký tài khoản" : "Đăng nhập"}</h2>
                 </div>
 
                 <form className="auth-form" onSubmit={handleSubmit}>
@@ -186,6 +185,8 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, isSignUp: init
                                 <select id="role" name="role" value={formData.role} onChange={handleChange}>
                                     <option value="student">Học viên</option>
                                     <option value="teacher">Giáo viên</option>
+                                    <option value="admin">Admin</option>
+                                    {/* admin  */}
                                 </select>
                             </div>
                         </>

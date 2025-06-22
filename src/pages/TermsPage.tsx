@@ -15,13 +15,13 @@ const TermsPage: React.FC = () => {
                 <div className="content-section">
                     <h2>1. Chấp nhận điều khoản</h2>
                     <p>
-                        Bằng việc truy cập và sử dụng website DevShare, bạn đồng ý tuân thủ và bị ràng buộc bởi các điều khoản và
+                        Bằng việc truy cập và sử dụng website FShare, bạn đồng ý tuân thủ và bị ràng buộc bởi các điều khoản và
                         điều kiện sử dụng này. Nếu bạn không đồng ý với bất kỳ phần nào của các điều khoản này, bạn không được phép
                         sử dụng dịch vụ của chúng tôi.
                     </p>
 
                     <h2>2. Mô tả dịch vụ</h2>
-                    <p>DevShare là nền tảng học tập và chia sẻ tài liệu IT, cung cấp:</p>
+                    <p>FShare là nền tảng học tập và chia sẻ tài liệu IT, cung cấp:</p>
                     <ul>
                         <li>Thư viện tài liệu học tập miễn phí</li>
                         <li>Workshop và khóa học trực tuyến</li>
@@ -46,11 +46,11 @@ const TermsPage: React.FC = () => {
 
                     <h2>4. Nội dung và sở hữu trí tuệ</h2>
                     <h3>4.1 Nội dung của người dùng</h3>
-                    <p>Khi upload tài liệu lên DevShare, bạn:</p>
+                    <p>Khi upload tài liệu lên FShare, bạn:</p>
                     <ul>
                         <li>Đảm bảo có quyền sở hữu hoặc được phép chia sẻ nội dung</li>
                         <li>Chịu trách nhiệm về tính chính xác và hợp pháp của nội dung</li>
-                        <li>Cấp cho DevShare quyền sử dụng, hiển thị và phân phối nội dung</li>
+                        <li>Cấp cho FShare quyền sử dụng, hiển thị và phân phối nội dung</li>
                         <li>Không upload nội dung vi phạm bản quyền hoặc pháp luật</li>
                     </ul>
 
@@ -84,7 +84,7 @@ const TermsPage: React.FC = () => {
                         <li>Hoàn tiền 100% nếu hủy trước 24h</li>
                         <li>Hoàn tiền 50% nếu hủy trước 12h</li>
                         <li>Không hoàn tiền nếu hủy trong vòng 12h</li>
-                        <li>Hoàn tiền trong trường hợp lỗi kỹ thuật từ phía DevShare</li>
+                        <li>Hoàn tiền trong trường hợp lỗi kỹ thuật từ phía FShare</li>
                     </ul>
 
                     <h2>7. Hành vi bị cấm</h2>
@@ -99,7 +99,7 @@ const TermsPage: React.FC = () => {
                     </ul>
 
                     <h2>8. Chấm dứt dịch vụ</h2>
-                    <p>DevShare có quyền tạm ngưng hoặc chấm dứt tài khoản của bạn nếu:</p>
+                    <p>FShare có quyền tạm ngưng hoặc chấm dứt tài khoản của bạn nếu:</p>
                     <ul>
                         <li>Vi phạm điều khoản sử dụng</li>
                         <li>Có hành vi gian lận hoặc lạm dụng</li>
@@ -108,7 +108,7 @@ const TermsPage: React.FC = () => {
                     </ul>
 
                     <h2>9. Giới hạn trách nhiệm</h2>
-                    <p>DevShare không chịu trách nhiệm cho:</p>
+                    <p>FShare không chịu trách nhiệm cho:</p>
                     <ul>
                         <li>Thiệt hại gián tiếp, ngẫu nhiên hoặc hậu quả</li>
                         <li>Mất mát dữ liệu hoặc lợi nhuận</li>
@@ -118,7 +118,7 @@ const TermsPage: React.FC = () => {
 
                     <h2>10. Thay đổi điều khoản</h2>
                     <p>
-                        DevShare có quyền cập nhật điều khoản này bất cứ lúc nào. Chúng tôi sẽ thông báo về những thay đổi quan
+                        FShare có quyền cập nhật điều khoản này bất cứ lúc nào. Chúng tôi sẽ thông báo về những thay đổi quan
                         trọng qua email hoặc thông báo trên website. Việc tiếp tục sử dụng dịch vụ sau khi có thay đổi đồng nghĩa
                         với việc bạn chấp nhận điều khoản mới.
                     </p>
@@ -132,7 +132,7 @@ const TermsPage: React.FC = () => {
                     <h2>12. Liên hệ</h2>
                     <p>Nếu có câu hỏi về điều khoản này, vui lòng liên hệ:</p>
                     <ul>
-                        <li>Email: legal@devshare.vn</li>
+                        <li>Email: legal@Fshare.vn</li>
                         <li>Điện thoại: +84 123 456 789</li>
                         <li>Địa chỉ: 123 Đường ABC, Quận 1, TP.HCM</li>
                     </ul>

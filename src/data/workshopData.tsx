@@ -135,7 +135,7 @@ export const workshopData: Workshop[] = [
             "Viết code React có thể tái sử dụng",
             "Tối ưu hóa performance ứng dụng",
         ],
-        registrationLink: "https://example.com/register/1",
+        registrationLink: "https://example.com/",
     },
     {
         id: 7,

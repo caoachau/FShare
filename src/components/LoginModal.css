@@ -48,22 +48,33 @@
 }
 
 .modal-header {
-  padding: 32px 32px 24px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+  padding: 32px 24px 24px;
+  width: 100%;
+}
+
+.modal-header h2,
+.modal-header p {
+  margin: 0;
+  width: 100%;
 }
 
 .modal-header h2 {
   font-size: 24px;
   font-weight: 700;
   color: #1e293b;
-  margin: 0 0 8px;
+  margin-bottom: 8px;
 }
 
 .modal-header p {
-  color: #64748b;
-  margin: 0;
   font-size: 14px;
+  color: #64748b;
 }
+
 
 .auth-form {
   padding: 0 32px 24px;

@@ -68,16 +68,11 @@ const NewsPage: React.FC = () => {
             <div className="news-container1">
                 <div className="page-header">
                     <h1>Tin tức & Blog</h1>
-
-                </div>
-                <div className="di">
+                     <div >
                     Cập nhật những tin tức mới nhất về công nghệ và lập trình
                 </div>
 
-
-                
-                
-
+                </div>
                 <div className="news-results">
                     
                     <div className="category-filters">
@@ -124,19 +119,26 @@ const NewsPage: React.FC = () => {
                                         <p className="news-description">{news.description}</p>
 
                                             <div className="author-info">
-                                                <img src={news.authorAvatar || "/placeholder.svg"} alt={news.author} />
+                                          
                                                 <div className="author-details">
-                                                    <span className="author-namee">{news.author}</span>
+                                                    <span className="author-name">{news.author}
+                                                    </span>
                                                     <span className="publish-datee">
+                                                        
                                                         {new Date(news.publishDate).toLocaleDateString("vi-VN")}
                                                     </span>
                                                 </div>
                                             </div>
-
+                                            <div className="author-avatar">
+                                                <img src={news.authorAvatar || "/default-avatar.png"} alt={news.author} />
+                                            </div>
                                             <div className="news-stats">
+                                                
                                                 <span className="views">
+                                                    
                                                     <i className="fas fa-eye"></i>
                                                     {news.views.toLocaleString()}
+                                                    
                                                 </span>
                                                 <span className="likes">
                                                     <i className="fas fa-heart"></i>

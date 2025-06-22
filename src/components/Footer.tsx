@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="footer-left">
-                © 2025 Coursera Inc. All rights reserved.
+                © 2025 FShare. Mọi quyền được bảo lưu.
             </div>
 
         </footer>

@@ -51,11 +51,11 @@ const Hero: React.FC = () => {
 
                         <div className="hero-actions">
                             <button className="btn-primary" onClick={handleGetStarted}>
-                                <span>Get Started</span>
+                                <span>Khám phá ngay</span>
                                 <i className="fas fa-rocket"></i>
                             </button>
                             <button className="btn-secondary" onClick={handleJoinTeacher}>
-                                <span>Join with Teacher</span>
+                                <span>Tham gia với giáo viên</span>
                                 <i className="fas fa-play"></i>
                             </button>
                         </div>

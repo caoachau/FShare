@@ -119,7 +119,7 @@ const BrowseByCategory: React.FC = () => {
         <div className="browse-category-section">
             <div className="category-container">
                 <div className="category-header">
-                    <h2 className="category-main-title">BROWSE BY CATEGORY</h2>
+                    <h2 className="category-main-title">TÌM KIẾM TÀI LIỆU</h2>
                     <p className="category-subtitle">Khám phá tài liệu theo từng lĩnh vực chuyên môn</p>
                 </div>
 

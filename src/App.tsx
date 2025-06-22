@@ -22,6 +22,8 @@ import FeedbackPage from "./pages/FeedbackPage"
 import ReportPage from "./pages/ReportPage"
 import NewsDetailPage from "./pages/NewsDetailPage"
 import WorkshopUploadPage from "./pages/WorkshopUploadPage"
+import AdminDashboard from "./pages/AdminDashboard"
+import AdminRoute from "./components/AdminRoute"
 import "./App.css"
 
 const App: React.FC = () => {
@@ -42,6 +44,15 @@ const App: React.FC = () => {
                             <Route path="/get-started" element={<GetStartedPage />} />
                             <Route path="/workshop-upload" element={<WorkshopUploadPage />} />
 
+
+                    <Route
+                    path="/admin"
+                    element={
+                    <AdminRoute>
+                        <AdminDashboard />
+                    </AdminRoute>
+                    }
+                    />
 
                             {/* Footer Pages */}
                             <Route path="/about" element={<AboutPage />} />

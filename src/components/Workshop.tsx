@@ -51,30 +51,30 @@ const Workshop: React.FC = () => {
                     <div className="feature-icon">
                         <i className="fas fa-users"></i>
                     </div>
-                    <h3>Small Group Settings</h3>
+                    <h3> Lớp Học Nhỏ </h3>
                     <p>
-                        Engage in intimate learning environments with limited participants to ensure personalized attention and
-                        meaningful interactions.
+                        Tham gia vào môi trường học tập thân mật với số lượng học viên giới hạn, đảm bảo sự chú ý cá nhân hóa và những tương tác có ý nghĩa. Mỗi học viên sẽ 
+                        được hướng dẫn tận tình và có cơ hội trao đổi trực tiếp với giảng viên.
                     </p>
                 </div>
                 <div className="feature-card">
                     <div className="feature-icon">
                         <i className="fas fa-laptop-code"></i>
                     </div>
-                    <h3>Interactive Sessions</h3>
+                    <h3>Tương Tác</h3>
                     <p>
-                        Participate in hands-on activities, real-time discussions, and collaborative projects that enhance your
-                        learning experience.
+                        Trải nghiệm các hoạt động thực hành, thảo luận nhóm và các dự án hợp tác giúp nâng cao trải nghiệm học tập của bạn. 
+                        Học qua thực hành với các bài tập tương tác và dự án thực tế.
                     </p>
                 </div>
                 <div className="feature-card">
                     <div className="feature-icon">
                         <i className="fas fa-book-open"></i>
                     </div>
-                    <h3>Diverse Topics</h3>
+                    <h3>Chủ Đề Đa Dạng</h3>
                     <p>
-                        Explore a wide range of subjects from technical skills to creative pursuits, all taught by industry experts
-                        and thought leaders.
+                        Khám phá nhiều chủ đề khác nhau từ các chuyên gia hàng đầu trong ngành và các nhà lãnh đạo tư duy. Từ công nghệ đến thiết kế, từ khởi nghiệp đến phát triển cá nhân.
+                        
                     </p>
                 </div>
             </div>
