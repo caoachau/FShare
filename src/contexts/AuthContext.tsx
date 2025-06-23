@@ -41,9 +41,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null)
   const [isLoading, setIsLoading] = useState(true)
 
+// Tải người dùng từ LocalStorage khi tải ban đầu
+  // Điều này mô phỏng kiểm tra xem người dùng có đăng nhập khi ứng dụng bắt đầu
   useEffect(() => {
     // Check if user is logged in on app start
-    const savedUser = localStorage.getItem("devshare_user")
+    const savedUser = localStorage.getItem("Fshare_user") // Retrieve user from localStorage
     if (savedUser) {
       setUser(JSON.parse(savedUser))
     }
@@ -81,7 +83,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       }
 
       setUser(mockUser)
-      localStorage.setItem("devshare_user", JSON.stringify(mockUser))
+      localStorage.setItem("Fshare_user", JSON.stringify(mockUser)) // Save user to localStorage for persistence
       setIsLoading(false)
       return true
     }

@@ -25,9 +25,9 @@ const categories = [
 const UploadPage: React.FC = () => {
     const navigate = useNavigate()
     const { user } = useAuth()
-    const [files, setFiles] = useState<File[]>([])
-    const [uploading, setUploading] = useState(false)
-    const [uploadProgress, setUploadProgress] = useState(0)
+    const [files, setFiles] = useState<File[]>([])//file dc chon
+    const [uploading, setUploading] = useState(false)//trang thai upload
+    const [uploadProgress, setUploadProgress] = useState(0)//tiến độ upload
     const [documentInfo, setDocumentInfo] = useState({
         title: "",
         description: "",
@@ -37,20 +37,20 @@ const UploadPage: React.FC = () => {
     })
     const fileInputRef = useRef<HTMLInputElement>(null)
     // Thêm state cho tab selection
-    const [activeTab, setActiveTab] = useState("document")
+    const [activeTab, setActiveTab] = useState("document")// tab hiện tại
 
-    useEffect(() => {
+    useEffect(() => { // Kiểm tra nếu người dùng không đăng nhập, chuyển hướng về trang chủ
         if (!user) {
             navigate("/")
         }
     }, [user, navigate])
 
-    const handleDragOver = (e: React.DragEvent) => {
+    const handleDragOver = (e: React.DragEvent) => { // Ngăn chặn hành vi mặc định khi kéo thả
         e.preventDefault()
         e.stopPropagation()
     }
 
-    const handleDrop = (e: React.DragEvent) => {
+    const handleDrop = (e: React.DragEvent) => { // Xử lý sự kiện thả file tu o drag and drop
         e.preventDefault()
         e.stopPropagation()
         if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
@@ -58,13 +58,13 @@ const UploadPage: React.FC = () => {
         }
     }
 
-    const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleFileInputChange = (e: React.ChangeEvent<HTMLInputElement>) => { // Xử lý sự kiện khi chọn file từ input
         if (e.target.files && e.target.files.length > 0) {
             handleFiles(Array.from(e.target.files))
         }
     }
 
-    const handleFiles = (newFiles: File[]) => {
+    const handleFiles = (newFiles: File[]) => { // Xử lý danh sách file được chọn hoặc kéo thả
         // Kiểm tra kích thước file (giới hạn 50MB)
         const validFiles = newFiles.filter((file) => {
             const isValidSize = file.size <= 50 * 1024 * 1024
@@ -75,7 +75,7 @@ const UploadPage: React.FC = () => {
         })
 
         // Kiểm tra loại file
-        const allowedTypes = [
+        const allowedTypes = [ 
             "application/pdf",
             "application/msword",
             "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
@@ -83,7 +83,7 @@ const UploadPage: React.FC = () => {
             "application/vnd.openxmlformats-officedocument.presentationml.presentation",
             "text/plain",
             "text/markdown",
-        ]
+        ] 
 
         const filteredFiles = validFiles.filter((file) => {
             const isValidType = allowedTypes.includes(file.type)
@@ -96,13 +96,13 @@ const UploadPage: React.FC = () => {
         setFiles((prev) => [...prev, ...filteredFiles])
     }
 
-    const handleUpload = async () => {
+    const handleUpload = async () => { // Xử lý upload tài liệu
         if (files.length === 0) {
             alert("Vui lòng chọn ít nhất một file để upload")
             return
         }
 
-        if (!documentInfo.title || !documentInfo.category) {
+        if (!documentInfo.title || !documentInfo.category) { // Kiểm tra thông tin tài liệu
             alert("Vui lòng điền đầy đủ thông tin tài liệu")
             return
         }
@@ -111,14 +111,14 @@ const UploadPage: React.FC = () => {
         setUploadProgress(0)
 
         // Simulate upload progress
-        const interval = setInterval(() => {
+        const interval = setInterval(() => { 
             setUploadProgress((prev) => {
                 if (prev >= 100) {
                     clearInterval(interval)
                     setUploading(false)
 
                     // Create new document object
-                    const newDocument = {
+                    const newDocument = { 
                         id: Date.now(),
                         title: documentInfo.title,
                         description: documentInfo.description,
@@ -146,16 +146,17 @@ const UploadPage: React.FC = () => {
                     // Add to documents data (in real app, this would be an API call)
                     documentsData.push(newDocument)
 
-                    // Save to localStorage for persistence in demo
-                    const uploadedFiles = JSON.parse(localStorage.getItem("uploadedFiles") || "[]")
+                    // lưu tài liệu vào localStorage để mô phỏng lưu trữ
+                    // (in real app, this would be a database)
+                    const uploadedFiles = JSON.parse(localStorage.getItem("uploadedFiles") || "[]") // Get existing uploaded files
                     uploadedFiles.push(newDocument)
-                    localStorage.setItem("uploadedFiles", JSON.stringify(uploadedFiles))
+                    localStorage.setItem("uploadedFiles", JSON.stringify(uploadedFiles)) 
 
                     alert("Upload thành công! Tài liệu của bạn đã được thêm vào thư viện.")
 
                     // Reset form
-                    setFiles([])
-                    setDocumentInfo({
+                    setFiles([]) 
+                    setDocumentInfo({ 
                         title: "",
                         description: "",
                         category: "",
@@ -164,7 +165,7 @@ const UploadPage: React.FC = () => {
                     })
 
                     // Navigate to documents page
-                    navigate("/documents")
+                    navigate("/documents") // up load xong quay ve trang all documents page
 
                     return 100
                 }
@@ -174,16 +175,16 @@ const UploadPage: React.FC = () => {
     }
 
     const removeFile = (index: number) => {
-        setFiles((prev) => prev.filter((_, i) => i !== index))
+        setFiles((prev) => prev.filter((_, i) => i !== index)) // Xóa file khỏi danh sách
     }
 
-    const formatFileSize = (bytes: number): string => {
-        if (bytes < 1024) return `${bytes} B`
-        if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`
+    const formatFileSize = (bytes: number): string => { // Định dạng kích thước file
+        if (bytes < 1024) return `${bytes} B` // Bytes
+        if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB` // Kilobytes
         return `${(bytes / (1024 * 1024)).toFixed(1)} MB`
     }
 
-    const getFileType = (filename: string): string => {
+    const getFileType = (filename: string): string => { // Xác định loại file dựa trên phần mở rộng
         const extension = filename.split(".").pop()?.toLowerCase()
         switch (extension) {
             case "pdf":

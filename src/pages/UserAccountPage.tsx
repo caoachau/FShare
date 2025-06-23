@@ -42,21 +42,22 @@ const UserAccountPage: React.FC = () => {
     const loadUserData = () => {
         if (!user) return
 
-        // Get user's uploaded documents
+        // lấy tài liệu đã tải lên từ dữ liệu mô phỏng
         const uploadedDocs = documentsData.filter((doc) => doc.authorId === user.id)
         setUserDocuments(uploadedDocs)
 
-        // Get favorite documents from localStorage
+        // Lấy tài liệu yêu thích từ localStorage
         const favorites = JSON.parse(localStorage.getItem(`favorites_${user.id}`) || "[]")
         const favoriteDocsData = documentsData.filter((doc) => favorites.includes(doc.id))
         setFavoriteDocuments(favoriteDocsData)
 
-        // Get registered workshops from localStorage
+        // Lấy workshop đã đăng ký từ localStorage
         const registeredWorkshopIds = JSON.parse(localStorage.getItem(`workshops_${user.id}`) || "[]")
         const registeredWorkshopsData = workshopData.filter((workshop) => registeredWorkshopIds.includes(workshop.id))
         setRegisteredWorkshops(registeredWorkshopsData)
 
-        // Calculate stats
+        // Tính toán thống kê tổng số
+
         const totalDownloads = uploadedDocs.reduce((sum, doc) => sum + doc.downloads, 0)
         setUserStats({
             uploadedDocuments: uploadedDocs.length,

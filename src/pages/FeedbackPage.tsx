@@ -15,19 +15,37 @@ const FeedbackPage: React.FC = () => {
         anonymous: false,
     })
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault()
-        alert("Cảm ơn bạn đã góp ý! Chúng tôi sẽ xem xét và cải thiện dịch vụ.")
-        setFormData({
-            name: "",
-            email: "",
-            type: "suggestion",
-            rating: 5,
-            subject: "",
-            message: "",
-            anonymous: false,
-        })
+   const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+
+    const newFeedback = {
+        ...formData,
+        createdAt: new Date().toISOString(),
     }
+
+    const blob = new Blob([JSON.stringify(newFeedback, null, 2)], {
+        type: "application/json",
+    })
+
+    const link = document.createElement("a")
+    link.href = URL.createObjectURL(blob)
+    link.download = `feedback-${Date.now()}.json` // tên file
+    link.click()
+
+    alert("Góp ý đã được lưu về máy của bạn!")
+
+    setFormData({
+        name: "",
+        email: "",
+        type: "suggestion",
+        rating: 5,
+        subject: "",
+        message: "",
+        anonymous: false,
+    })
+}
+
+
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value, type } = e.target

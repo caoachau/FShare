@@ -28,6 +28,7 @@ const DocumentDetailPage: React.FC = () => {
             link.href = document.fileUrl
             link.download = `${document.title}.${document.fileType.toLowerCase()}`
             link.target = "_blank"
+            link.rel = "noopener noreferrer"
             window.document.body.appendChild(link)
             link.click()
             window.document.body.removeChild(link)
@@ -36,6 +37,33 @@ const DocumentDetailPage: React.FC = () => {
             console.log(`Downloaded: ${document.title}`)
         }
     }
+const [isFavorite, setIsFavorite] = useState(false)
+
+useEffect(() => {
+    if (id) {
+        const doc = getDocumentById(Number.parseInt(id))
+        setDocument(doc || null)
+        setLoading(false)
+
+        // Kiểm tra nếu tài liệu đã được yêu thích trước đó
+        const favorites = JSON.parse(localStorage.getItem("favorites") || "[]")
+        setIsFavorite(favorites.includes(id))
+    }
+}, [id])
+
+const toggleFavorite = () => {
+    const favorites = JSON.parse(localStorage.getItem("favorites") || "[]")
+    let updatedFavorites
+
+    if (isFavorite) {
+        updatedFavorites = favorites.filter((favId: string) => favId !== id)
+    } else {
+        updatedFavorites = [...favorites, id]
+    }
+
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites))
+    setIsFavorite(!isFavorite)
+}
 
     if (loading) {
         return (
@@ -63,7 +91,20 @@ const DocumentDetailPage: React.FC = () => {
             </div>
         )
     }
-
+// Nếu muốn hiển thị thông tin tài liệu, hãy sử dụng biến document trực tiếp ở dưới.
+        //tài liệu yêu thích
+    // Kiểm tra nếu tài liệu không tồn tại
+    if (!document) {
+        return (
+            <div className="document-not-found">
+                <h2>Tài liệu không tồn tại</h2>
+                <p>Xin lỗi, tài liệu bạn đang tìm kiếm không có trong hệ thống.</p>
+                <Link to="/documents" className="btn-primary">
+                    Quay lại thư viện
+                </Link>
+            </div>
+        )
+    }
     return (
         <div className="document-detail-page">
             <div className="document-detail-container">
@@ -96,6 +137,10 @@ const DocumentDetailPage: React.FC = () => {
                             <div className="document-details">
                                 <h1 className="document-title">{document.title}</h1>
                                 <p className="document-description">{document.description}</p>
+                        <button onClick={toggleFavorite} className={`favorite-btn ${isFavorite ? "active" : ""}`}>
+                    <i className={isFavorite ? "fas fa-heart" : "far fa-heart"}></i>
+                    {isFavorite ? "Đã yêu thích" : "Yêu thích"}
+                </button>
 
                                 <div className="document-stats-row">
                                     <div className="stat-item">

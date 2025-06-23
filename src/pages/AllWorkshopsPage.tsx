@@ -48,7 +48,7 @@ const AllWorkshopsPage: React.FC = () => {
             )
         }
 
-        // Sort workshops
+        // lọc theo tiêu chí sắp xếp
         switch (sortBy) {
             case "date":
                 filtered.sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime())

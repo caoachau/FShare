@@ -33,13 +33,13 @@ const App: React.FC = () => {
                 <div className="App">
                     <Layout>
                         <Routes>
-                            <Route path="/" element={<HomePage />} />
-                            <Route path="/documents" element={<DocumentsPage />} />
-                            <Route path="/document/:id" element={<DocumentDetailPage />} />
-                            <Route path="/news" element={<NewsPage />} />
-                            <Route path="/news/:id" element={<NewsDetailPage />} />
-                            <Route path="/workshops" element={<AllWorkshopsPage />} />
-                            <Route path="/upload" element={<UploadPage />} />
+                            <Route path="/" element={<HomePage />} /> // Home page
+                            <Route path="/documents" element={<DocumentsPage />} /> // All documents page
+                            <Route path="/document/:id" element={<DocumentDetailPage />} /> // Document detail page
+                            <Route path="/news" element={<NewsPage />} /> // All news page
+                            <Route path="/news/:id" element={<NewsDetailPage />} /> // News detail page
+                            <Route path="/workshops" element={<AllWorkshopsPage />} /> // All workshops page
+                            <Route path="/upload" element={<UploadPage />} /> // Upload page
                             <Route path="/account" element={<UserAccountPage />} />
                             <Route path="/get-started" element={<GetStartedPage />} />
                             <Route path="/workshop-upload" element={<WorkshopUploadPage />} />

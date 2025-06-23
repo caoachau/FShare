@@ -17,21 +17,39 @@ const ReportPage: React.FC = () => {
         anonymous: false,
     })
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault()
-        alert("Báo cáo của bạn đã được gửi thành công! Chúng tôi sẽ xem xét trong vòng 24h.")
-        setFormData({
-            reporterName: "",
-            reporterEmail: "",
-            type: "content",
-            priority: "medium",
-            url: "",
-            subject: "",
-            description: "",
-            evidence: null,
-            anonymous: false,
-        })
+// Hàm xử lý gửi báo cáo
+   const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+
+    const newFeedback = {
+        ...formData,
+        createdAt: new Date().toISOString(),
     }
+
+    const blob = new Blob([JSON.stringify(newFeedback, null, 2)], {
+        type: "application/json",
+    })
+
+    const link = document.createElement("a")
+    link.href = URL.createObjectURL(blob)
+    link.download = `feedback-${Date.now()}.json` // tên file
+    link.click()
+
+    alert("Góp ý đã được lưu về máy của bạn!")
+
+    setFormData({
+        reporterName: "",
+        reporterEmail: "",
+        type: "content",
+        priority: "medium",
+        url: "",
+        subject: "",
+        description: "",
+        evidence: null,
+        anonymous: false,
+    })
+}
+
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value, type } = e.target
@@ -208,7 +226,7 @@ const ReportPage: React.FC = () => {
                                         name="url"
                                         value={formData.url}
                                         onChange={handleChange}
-                                        placeholder="https://devshare.vn/..."
+                                        placeholder="https://Fshare.vn/..."
                                     />
                                     <small>Link đến trang, tài liệu hoặc profile có vấn đề</small>
                                 </div>
