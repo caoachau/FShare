@@ -78,12 +78,14 @@ const NewsDetailPage: React.FC = () => {
 
                         <div className="article-meta">
                             <div className="author-info">
-                                <img src={news.authorAvatar || "/placeholder.svg"} alt={news.author} />
                                 <div className="author-details">
+                                                                    <img src={news.authorAvatar || "/placeholder.svg"} alt={news.author} />
+
                                     <span className="author-name">{news.author}</span>
                                     <span className="publish-date">{new Date(news.publishDate).toLocaleDateString("vi-VN")}</span>
                                 </div>
                             </div>
+                            
 
                             <div className="article-stats">
                 <span className="views">

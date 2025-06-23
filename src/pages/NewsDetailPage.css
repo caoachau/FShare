@@ -122,9 +122,8 @@
 }
 
 .article-meta {
-    transform: translateX(-400px);
     display: flex;
-    justify-content: flex-start; /* căn trái toàn bộ nội dung */
+    justify-content: center; /* căn trái toàn bộ nội dung */
     align-items: center;
     gap: 24px; /* thêm khoảng cách nếu có nhiều phần tử */
     padding: 20px 0;
@@ -139,7 +138,6 @@
 }
 
 .author-info img {
-    transform: translateX(-60px);
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -163,7 +161,6 @@
 }
 
 .article-stats {
-    transform: translateX(360px);
     display: flex;
     gap: 20px;
     font-size: 14px;

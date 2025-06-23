@@ -120,18 +120,17 @@ const NewsPage: React.FC = () => {
 
                                             <div className="author-info">
                                           
-                                                <div className="author-details">
-                                                    <span className="author-name">{news.author}
-                                                    </span>
-                                                    <span className="publish-datee">
-                                                        
-                                                        {new Date(news.publishDate).toLocaleDateString("vi-VN")}
-                                                    </span>
+                                                <div className="article-meta">
+                                                <div className="author-info">
+                                                    <div className="author-details">
+                                                                                        <img src={news.authorAvatar || "/placeholder.svg"} alt={news.author} />
+
+                                                        <span className="author-name">{news.author}</span>
+                                                        <span className="publish-date">{new Date(news.publishDate).toLocaleDateString("vi-VN")}</span>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div className="author-avatar">
-                                                <img src={news.authorAvatar || "/default-avatar.png"} alt={news.author} />
-                                            </div>
+                                           </div>
                                             <div className="news-stats">
                                                 
                                                 <span className="views">
